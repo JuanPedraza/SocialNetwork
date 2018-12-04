@@ -11,6 +11,10 @@ module.exports = (sequelize, DataTypes) => {
         texto: {
             type: DataTypes.TEXT,
             allowNull: false,
+        },
+        id_file: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
         }
     }, {
             // don't add the timestamp attributes (updatedAt, createdAt)
@@ -35,17 +39,12 @@ module.exports = (sequelize, DataTypes) => {
         });
 
     Post.associate = models => {
-        Post.belongsToMany(models.File, {
-            through: 'file_post',
+        Post.belongsTo(models.File, {
             foreignKey: 'post'
         });
  
-        Post.belongsToMany(models.User, {
-            through: 'user_post'
-        });
- 
-        Post.belongsTo(models.File, {
-            foreignKey: 'photo'
+        Post.belongsTo(models.User, {
+            foreignKey: 'user'
         });
     };
 

@@ -1,4 +1,3 @@
-
 "use strict";
 let fileUtils = require('../modules/fileUtils');
 
