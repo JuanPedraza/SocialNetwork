@@ -11,7 +11,7 @@ config.database.username = "root";
 config.database.password = "CwqSoIu9pZMorHuZ";
 config.database.port = "3306";
 config.database.host = "phenixbytes.com";
-config.database.database = "proyecto_juan_edwin";
+config.database.database = "socialNetwork";
 config.database.operatorsAliases = false;
 
 config.database.pool = {};
